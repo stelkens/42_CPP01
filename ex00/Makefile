@@ -4,7 +4,7 @@ NAME = ex00
 
 SRC = ${addsuffix .cpp, main newZombie randomChump Zombie}
 
-OBJ = $(SRC:%.cpp = %.o)
+OBJ = $(SRC:%.cpp=build/%.o)
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -15,11 +15,12 @@ all: $(NAME)
 $(NAME): $(OBJ)
 		$(CXX) $(OBJ) -o $(NAME)
 
-%.o: %.cpp
+build/%.o: %.cpp
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 clean:
-	rm -f $(OBJ)
+	rm -rf build
 
 fclean: clean
 	rm -f $(NAME)

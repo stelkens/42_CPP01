@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 15:55:13 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/06 18:01:22 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/06 18:38:14 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ private:
 };
 
 Zombie* newZombie( std::string name);
+void randomChump( std::string name );
 
 #endif
