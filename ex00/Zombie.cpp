@@ -6,38 +6,33 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 16:08:24 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/06 18:28:42 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/07 16:33:39 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 Zombie::Zombie(void){
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Constructor called\n";
 	return;
 }
 
 Zombie::~Zombie(void){
-	if(_name.empty())
-		return;
-	std::cout << "Destructor destroyed Zombie named: " << this->_name << std::endl;
+	std::cout << "Destructor destroyed Zombie named: " << this->_name << "\n";
 	return;
 }
 
 void	Zombie::announce( void ){
-	if(_name.empty())
-		return;
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ...\n";
 	return;
 }
 
-std::string	Zombie::getname( void ) const{
+std::string	Zombie::getName( void ) const{
 	return _name;
 }
 
-void	Zombie::setname( std::string new_name ){
-	if(!new_name.empty())
-		_name = new_name;
+void	Zombie::setName( std::string new_name ){
+	_name = new_name;
 	return;
 }
 

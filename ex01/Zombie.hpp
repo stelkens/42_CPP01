@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 15:55:13 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/06 19:44:24 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/07 16:34:30 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ public:
 	Zombie(void);
 	~Zombie(void);
 
-	std::string	getname( void ) const;
-	void		setname( std::string new_ame );
+	void		setName( std::string new_ame );
 	void		announce( void );
 
 private:
