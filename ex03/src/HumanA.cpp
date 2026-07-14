@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:08:20 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/14 15:50:30 by tstelken         ###   ########.fr       */
+/*   Created: 2026/07/14 14:44:44 by tstelken          #+#    #+#             */
+/*   Updated: 2026/07/14 15:28:14 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_H
-# define HUMANA_H
+#include "HumanA.hpp"
+#include <iostream>
 
-#include <string>
-#include "Weapon.hpp"
+HumanA::HumanA(std::string name, Weapon &weapon): _name(name), _winHand(weapon){
+	std::cout << _name << " arrived with *" << this->_winHand.getType() << "* in they Hands\n"; 
+}
 
-class HumanA {
+HumanA::~HumanA(void){
+	std::cout << _name << " left the scene\n";
+}
 
-private:
-	Weapon&		_winHand;
-	std::string	_name;
-
-public:
-	HumanA(std::string name, Weapon &weapon);
-	~HumanA(void);
-
-	void attack(void);
-};
-
-#endif
+void HumanA::attack(void){
+	std::cout << _name << " attacks with *" <<_winHand.getType() << "*\n";
+}
