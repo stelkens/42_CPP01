@@ -6,15 +6,15 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/14 15:16:20 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/14 15:47:13 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/14 17:20:31 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 #include <iostream>
 
-HumanB::HumanB(std::string name):_name(name), _winHand(nullptr){
-	std::cout << _name << " arrived with " << _winHand->getType() << "\n";
+HumanB::HumanB(std::string name):_name(name), _winHand(NULL){
+	std::cout << _name << " arrived with *no weapon*\n";
 }
 
 HumanB::~HumanB(void){
@@ -29,5 +29,5 @@ void	HumanB::attack(void){
 }
 
 void	HumanB::setWeapon(Weapon& newWeapon){
-	_winHand = &newWeapon;
+		_winHand = &newWeapon;
 }

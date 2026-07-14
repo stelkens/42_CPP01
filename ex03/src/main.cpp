@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:09:02 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/14 16:08:23 by tstelken         ###   ########.fr       */
+/*   Created: 2026/07/14 15:26:36 by tstelken          #+#    #+#             */
+/*   Updated: 2026/07/14 17:22:24 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_H
-# define HUMANB_H
-
-#include <string>
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-class HumanB {
-
-private:
-	std::string	_name;
-	Weapon*		_winHand;
-
-public:
-	HumanB(std::string name);
-	~HumanB(void);
-
-	void	attack(void);
-	void	setWeapon(Weapon& newWeapon);
-};
-
-#endif
+int main (){
+{
+	Weapon club = Weapon("crude spiked club");
+	HumanA blue("Blue", club);
+	blue.attack();
+	club.setType("some other type of club");
+	blue.attack();
+}
+{
+	Weapon club = Weapon("crude spiked club");
+	HumanB jimi("Jimi");
+	jimi.attack();
+	jimi.setWeapon(club);
+	jimi.attack();
+	club.setType("some other type of club");
+	jimi.attack();
+	return 0;
+}
+}

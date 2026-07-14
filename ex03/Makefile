@@ -2,28 +2,35 @@
 
 NAME = ex03
 
-SRC = ${addsuffix .cpp, main HumanA HumanB Weapon}
+SRC = ${addprefix src/, main.cpp\
+						HumanA.cpp\
+						HumanB.cpp\
+						Weapon.cpp}
 
-HEADERS = include/Weapon.hpp \
-          include/HumanA.hpp \
-          include/HumanB.hpp
+HEADERS =  ${addprefix include/,	Weapon.hpp \
+          							HumanA.hpp \
+         							HumanB.hpp}
 
-OBJ = $(SRC:%.cpp=build/%.o)
+OBJ = $(SRC:src/%.cpp=build/%.o)
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinclude
 
 CXX = c++
 
-
+DFLAG = -g
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 		$(CXX) $(OBJ) -o $(NAME)
 
-build/%.o: %.cpp $(HEADERS)
+build/%.o: src/%.cpp $(HEADERS)
 	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
+
+debug: CXXFLAGS += $(DFLAG)
+debug:	fclean $(NAME)
+		@echo "Debug_Build done"
 
 clean:
 	rm -rf build
