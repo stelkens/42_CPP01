@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/17 16:10:02 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/17 17:53:56 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/17 18:08:24 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,33 +33,37 @@ void	Harl::_error(void){
 	return;
 }
 
-const	Harl::Command Harl::commands[4] = {
-	{"DEBUG", &Harl::_debug},
-	{"INFO", &Harl::_info},
-	{"WARNING", &Harl::_warning},
-	{"ERROR", &Harl::_error},
+const	Harl::Command Harl::commands[4]= {
+	{"DEBUG"},
+	{"INFO"},
+	{"WARNING"},
+	{"ERROR"},
 };
 
 void	Harl::complain(std::string level){
-	for (int i = 0; i < 5; i++){
+	int i;
+	for (i = 0; i < 4; i++){
 		if(commands[i].level == level){
-			switch (i)
-			{
-			case 0:
-				(this->*(commands[0].function))();
-				//fall through
-			case 1:
-				(this->*(commands[1].function))();
-				//fall through
-			case 2:
-				(this->*(commands[2].function))();
-				//fall through
-			case 3:
-				(this->*(commands[3].function))();
-				break;
-			}
+			break;
 		}
-		else if (i == 4)
-			std::cout << "[ Probably complaining about insignificant problems ]\n";
+	}
+	if (i == 4){
+		std::cout << "[ Probably complaining about insignificant problems ]\n";
+		return ;
+	}
+	switch (i)
+	{
+	case 0:
+		_debug();
+		//fall through
+	case 1:
+		_info();
+		//fall through
+	case 2:
+		_warning();
+		//fall through
+	case 3:
+		_error();
+		break;
 	}
 }
