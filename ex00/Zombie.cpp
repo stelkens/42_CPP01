@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 16:08:24 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/07 16:33:39 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/17 13:00:23 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Zombie::Zombie(void){
 }
 
 Zombie::~Zombie(void){
-	std::cout << "Destructor destroyed Zombie named: " << this->_name << "\n";
+	std::cout << "Destructor destroyed Zombie named: " << this->_name << '\n';
 	return;
 }
 
