@@ -158,8 +158,4 @@ echo "Last 100 characters:"
 tail -c 100 longline.txt.replace
 echo ""
 
-#echo ""
-#echo "=== Cleanup ==="
-#rm -f *.replace
-
 echo "Done."

@@ -30,5 +30,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f *.txt
+	rm -f *.replace
 
 re: fclean all
