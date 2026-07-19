@@ -6,12 +6,12 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/07 16:57:47 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/14 15:50:56 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/19 17:22:45 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_H
-# define WEAPON_H
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
 #include <string>
 

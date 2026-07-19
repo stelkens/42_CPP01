@@ -6,12 +6,12 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/07 17:08:20 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/14 17:38:27 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/19 17:22:38 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_H
-# define HUMANA_H
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
 #include <string>
 #include "Weapon.hpp"

@@ -6,12 +6,12 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 15:55:13 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/07 16:33:46 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/19 17:22:14 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include<string>
 #include<iostream>
